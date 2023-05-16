@@ -1,6 +1,6 @@
 # ProxyMap
 # Author: Charly One
-Use Nmap with proxychains with SOCKS5, tool written in bash using the utilities available like nmap, proxychains and tor.
+Use Nmap with proxychains and SOCKS5, tool written in bash using the utilities available like nmap, proxychains and tor.
 
 ****
 
