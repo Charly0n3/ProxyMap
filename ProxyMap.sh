@@ -87,7 +87,7 @@ function scan() {
 	echo -e "${green}[2]${end} Escaneo de servicios activos en un host o una red ${turquesa}[PROXYCHAINS]${end} \n"
 	echo -e "${green}[3]${end} Escaneo de vulnerabilidades de un host ${turquesa}[PROXYCHAINS]${end} \n"
 	echo -e "${green}[4]${end} Escaneo de host completo y silencioso ${turquesa}[PROXYCHAINS]${end} \n"
-	echo -e "${green}[5]${end} Fuzzing web ${turquesa}[PROXYCHAINS]${end}\n"
+	echo -e "${green}[5]${end} Fuzzing web \n"
 	echo -e "${green}[6]${end} Salir \n"
 	echo -e "${green}[clear]${end} \n"
 	echo
@@ -144,7 +144,7 @@ function scan() {
 		echo -e "${green}[2]${end} Escaneo de servicios activos en un host o una red ${turquesa}[PROXYCHAINS]${end} \n"
 		echo -e "${green}[3]${end} Escaneo de vulnerabilidades de un host ${turquesa}[PROXYCHAINS]${end} \n"
 		echo -e "${green}[4]${end} Escaneo de host completo y silencioso ${turquesa}[PROXYCHAINS]${end} \n"
-		echo -e "${green}[5]${end} Fuzzing web ${turquesa}[PROXYCHAINS]${end}\n"
+		echo -e "${green}[5]${end} Fuzzing web \n"
 		echo -e "${green}[6]${end} Salir \n"
 		echo -e "${green}[clear]${end}\n"
 		echo
@@ -154,7 +154,7 @@ function scan() {
 		read -p "--> " ip
 		echo -e "${turquesa}[!]${end} ¿Sobre que puerto? [80,443]"
 		read -p "--> " port
-		sudo proxychains nmap --script http-enum -p $port $ip -vvv 2> /dev/null
+		sudo nmap --script http-enum -p $port $ip -vvv 2> /dev/null
 		;;
 
 		6)
